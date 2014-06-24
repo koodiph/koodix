@@ -10,7 +10,7 @@ angular.module('mean').controller('ArticlesController', ['$scope', '$stateParams
         Socket.on('onArticleCreated', function(data) {
             console.log(data);
             if(!data.err) {
-                $scope.articles.push(data)
+                $scope.articles.push(data);
             }
         });
 

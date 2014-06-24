@@ -7,7 +7,7 @@ var mongoose = require('mongoose'),
     Article = mongoose.model('Article'),
     _ = require('lodash'); 
 
-var io = require('meanio').load('io');
+// var io = require('meanio').load('io');
 
 /**
  * Find article by id
@@ -37,7 +37,7 @@ exports.article = function(req, res, next, id) {
 
         callback();
     });
- }
+ };
 
 // exports.create = function(req, res) {
 //     console.log(req.body);
@@ -86,7 +86,7 @@ exports.destroy = function(req, res) {
                 error: 'Cannot delete the article'
             });
         }
-        res.jsonp(article);Showcof
+        res.jsonp(article);
 
     });
 };

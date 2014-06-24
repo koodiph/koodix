@@ -4,8 +4,8 @@
  * Module dependencies.
  */
 var mongoose = require('mongoose'),
-    passport = require('passport'),
-    logger = require('mean-logger');
+    passport = require('passport');
+    // logger = require('mean-logger');
 
 /**
  * Main application entry file.
