@@ -1,23 +1,24 @@
-//main class
-var c = function() {
-	this.__constructor.call(this);
-}, public = c.prototype; 
+// 'use strict';
+// //main class
+// var c = function() {
+// 	this.__constructor.call(this);
+// }, public = c.prototype; 
 
-//outside loader
-public.__load = c.load = function() {
-	return new c();
-};
+// //outside loader
+// public.__load = c.load = function() {
+// 	return new c();
+// };
 
-//synthetic constructor
-public.__constructor = c.constructor = function() {
+// //synthetic constructor
+// public.__constructor = c.constructor = function() {
 
-}; 
+// }; 
 
-//public methods
-public.__anyone = c.anyone = function(req, res) {
-	console.log('Yey!');
-    res.send('Anyone can access this');
-};
+// //public methods
+// public.__anyone = c.anyone = function(req, res) {
+// 	console.log('Yey!');
+//     res.send('Anyone can access this');
+// };
 
-//adapter
-module.exports = exports = c;
+// //adapter
+// module.exports = exports = c;

@@ -1,17 +1,17 @@
-// 'use strict';
+'use strict';
 
 /**
  * Module dependencies.
  */
-var mongoose        = require('mongoose'),
-    WorkflowModel   = mongoose.model('Workflow'),
-    _               = require('lodash'); 
+// var mongoose        = require('mongoose'),
+    // WorkflowModel   = mongoose.model('Workflow'),
+    // _               = require('lodash'); 
 
-var workflow        = require('../../lib/workflow');
+// var workflow        = require('../../lib/workflow');
 
-var c = function() {
-    this.__constructor.call(this);
-}, public = c.prototype; 
+// var c = function() {
+    // this.__constructor.call(this);
+// }, public = c.prototype; 
 
 // public.__load = c.load = function() {
 //     return new c();
@@ -21,14 +21,14 @@ var c = function() {
 
 // }; 
 
-module.exports = exports = _.extend(c, workflow);
+// module.exports = exports = _.extend(c, workflow);
 
-// exports.anyone = function(req, res) {
-//     console.log('mark');
-//     console.log(workflow);
+exports.anyone = function(req, res) {
+    // console.log('mark');
+    // console.log(workflow);
 
-//     res.send('Anyone can access this');
-// };
+    res.send('Anyone can access this');
+};
 
 // /**
 //  * Find article by id
