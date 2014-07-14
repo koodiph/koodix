@@ -1,0 +1,90 @@
+<section class="project-details" data-ng-controller="ProjectsController" data-ng-init="findOne()">
+
+    <!-- start site-messages 
+    <div class="site-message" data-ng-include="'/public/system/views/messages.html'"></div>
+    end site-messages -->
+
+    <div id="scrollArea" class="main-content-wrapper {{contentClass}}" style="overflow: auto;">
+        <div class="main-content-inner">
+            <div class="main-content">
+                <div class="stage-wrapper" data-ng-repeat="stage in project.workflows.stages">
+                    <h1 class="stage-name">{{stage.name}}</h1>
+                    <div class="list-wrapper">
+                        <div class="list">
+                            <div class="list-header">
+                                <h2 class="list-title">New</h2>
+                            </div>
+                            <div class="list-tickets">
+                            </div>
+                            <a class="create-ticket" href="#">Add a ticket</a>
+                        </div>
+                    </div>
+                    <div class="list-wrapper">
+                        <div class="list">
+                            <div class="list-header">
+                                <h2 class="list-title">Sprint</h2>
+                            </div>
+                            <div class="list-tickets">
+                            </div>
+                            <a class="create-ticket" href="#">Add a ticket</a>
+                        </div>
+                    </div>
+                    <div class="list-wrapper">
+                        <div class="list">
+                            <div class="list-header">
+                                <h2 class="list-title">Done</h2>
+                            </div>
+                            <div class="list-tickets">
+                            </div>
+                            <a class="create-ticket" href="#">Add a ticket</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar-wrapper" data-ng-show="sidebar">
+        <button class="btn btn-default sidebar-hide-button" data-ng-click="toggleSidebar()">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </button>
+
+        <div class="sidebar-widget sidebar-widget-nav"> 
+          <h3 class="sidebar-widget-nav-toggle" title="Click here to see more options."> Menu </h3> 
+        </div>
+
+        <hr>
+
+        <div class="sidebar-widget sidbar-widget-teams clearfix">
+            <div class="sidebar-widget-title"><h3>Teams</h3></div> 
+            <div class="sidebar-widget-content">
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="sidebar-widget sidbar-widget-members clearfix">
+            <div class="sidebar-widget-title"><h3>Members</h3></div> 
+            <div class="sidebar-widget-content">
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="sidebar-widget sidbar-widget-logs clearfix">
+            <div class="sidebar-widget-title"><h3>Logs</h3></div> 
+            <div class="sidebar-widget-content">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="btn btn-default sidebar-show-button" data-ng-show="!sidebar" data-ng-click="toggleSidebar()">
+        Show Sidebar
+    </div>
+</section>
+
+<script type="text/javascript">
+  new DragDivScroll('scrollArea', 'noXBarHide noOverscroll');
+</script>

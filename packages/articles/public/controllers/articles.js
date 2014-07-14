@@ -5,7 +5,7 @@ angular.module('mean').controller('ArticlesController', ['$scope', '$stateParams
         $scope.global = Global;
 
         /***** create the article container array *****/
-        // $scope.articles = [];
+        $scope.articles = [];
 
         Socket.on('onArticleCreated', function(data) {
             console.log(data);
@@ -14,7 +14,7 @@ angular.module('mean').controller('ArticlesController', ['$scope', '$stateParams
             }
         });
 
-        $scope.hasAuthorization = function(article) {
+        $scope.hasAuthorization = function(article) { 
             if (!article || !article.user) return false;
             return $scope.global.isAdmin || article.user._id === $scope.global.user._id;
         };
@@ -27,7 +27,8 @@ angular.module('mean').controller('ArticlesController', ['$scope', '$stateParams
                 //set article properties to the request body
                 var article = {
                     title: this.title,
-                    content: this.content
+                    content: this.content,
+                    user: $scope.global.user
                 };
 
                 $scope.articles.push(article);
@@ -78,7 +79,7 @@ angular.module('mean').controller('ArticlesController', ['$scope', '$stateParams
             }
         };
 
-        $scope.find = function() {
+        $scope.find = function() { 
             Articles.query(function(articles) {
                 $scope.articles = articles;
             });

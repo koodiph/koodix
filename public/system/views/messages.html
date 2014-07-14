@@ -1,0 +1,16 @@
+<!-- start debug-message -->
+<div class="row" data-ng-if="debug_message && global.debug">
+	<pre class="col-md-12">
+	{{debug_message}}
+	</pre>
+</div>
+<!-- end debug-message -->
+
+<!-- start alert -->
+<div class="row">
+	<div class="alert alert-danger col-md-12" data-ng-show="customMessage">
+	    <a class="close" data-ng-click="dismiss('customMessage')">&times;</a>
+	    {{customMessage}}
+	</div>
+</div>
+<!-- end alert -->
