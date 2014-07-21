@@ -165,18 +165,18 @@
 .project-details .sidebar-widget-content {
 	position: relative;
 }
-.project-details .sidebar-widget-settings {
+.project-details .sidebar-widget-nav {
 	border-radius: 3px;
 	background: #dcdcdc;
 	overflow: hidden;
-	padding: 7px 10px;
+	padding: 0;
 	position: relative;
 }
-.project-details .sidebar-widget-settings-toggle {
+.project-details .sidebar-widget-nav-toggle {
 	border-radius: 3px;
 	margin: 0;
+	padding: 7px 10px;
 	position: relative;
-	padding: 0 0 5px 0;
 	font-size: 15px;
 	cursor: pointer;
 	font-weight: bold;

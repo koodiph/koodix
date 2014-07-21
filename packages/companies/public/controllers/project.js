@@ -8,13 +8,16 @@ angular.module('mean.companies').controller('ProjectsController', ['$scope', '$s
 
         $scope.projects = {};
 
-        // $scope.showForm = false;
+        $scope.showForm = false;
 
         $scope.contentClass = 'with-sidebar';
 
         $scope.sidebar = true;
 
-        $scope.settingsCollapsed = true;
+        $scope.toogleCreateProjectForm = function() {
+            console.log('mark');
+            $scope.showForm = $scope.showForm === false;
+        };
 
         $scope.create = function() {
             var companyId = $stateParams.companyId ? $stateParams.companyId : '';
