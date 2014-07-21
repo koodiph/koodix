@@ -50,8 +50,18 @@
             <span class="glyphicon glyphicon-chevron-right"></span>
         </button>
 
-        <div class="sidebar-widget sidebar-widget-nav"> 
-          <h3 class="sidebar-widget-nav-toggle" title="Click here to see more options."> Menu </h3> 
+        <div class="sidebar-widget sidebar-widget-settings"> 
+            <h3 class="sidebar-widget-settings-toggle" ng-click="settingsCollapsed = !settingsCollapsed">
+                Settings</h3> 
+            <div collapse="settingsCollapsed" class="sidebar-widget-settings-collapsed">
+                <div class="">Choose Workflow:</div> 
+                <div class="radio" data-ng-repeat="workflow in project.workflows">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">Default Workflow
+                    </label>
+                </div>
+                <button class="btn btn-default">Create Workflow</button>
+            </div> 
         </div>
 
         <hr>

@@ -10,20 +10,20 @@
             <h1 class="project-title">{{company.name}}</h1>
         </div>
 
-        <div data-ng-if="showForm == false" class="col-md-2 col-md-offset-1 project-create-hidden-wrapper">
+        <div data-ng-show="!showForm" class="col-md-2 col-md-offset-1 project-create-hidden-wrapper">
             <div>
-                <div class="btn btn-default col-md-12" data-ng-click="toogleCreateProjectForm()">Create Project</div>
+                <div class="btn btn-default col-md-12" data-ng-click="showForm = !showForm">Create Project</div>
             </div>
         </div>
 
         <div class="col-md-3 project-create-absolute-wrapper">
-            <div data-ng-if="showForm == true" class="col-md-12 project-create-shown-wrapper">
+            <div data-ng-show="showForm" class="col-md-12 project-create-shown-wrapper">
                 <div class="input-projectname-wrapper">
                     <input name="projectName" type="text" class="form-control" data-ng-model="projectName" id="projectName" placeholder="Project Name" required>
                 </div>
                 <div>
                     <div class="btn btn-default" data-ng-click="create()">Save</div>
-                    <div class="btn btn-default" data-ng-click="toogleCreateProjectForm()">Cancel</div>
+                    <div class="btn btn-default" data-ng-click="showForm = !showForm">Cancel</div>
                 </div>
             </div>
         </div>
