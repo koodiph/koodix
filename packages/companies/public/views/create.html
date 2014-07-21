@@ -1,0 +1,37 @@
+<div class="container-fluid companies-create" data-ng-controller="CompaniesController">
+	<h1>Start managing your projects the koodi way!</h1>
+
+    <form name="companyForm" class="form-horizontal col-md-12" role="form" data-ng-submit="create(companyForm.$valid)" novalidate>
+        
+        <div class="form-group" data-ng-class="{ 'has-error' : submitted && companyForm.name.$invalid }">
+            <div class="col-md-6 col-md-offset-3">
+                <input name="name" type="text" class="form-control" data-ng-model="name" id="name" placeholder="May we know your company's name?" required>
+                <div data-ng-show="submitted && companyForm.name.$invalid" class="help-block">
+                    <p data-ng-show="companyForm.name.$error.required">Title is required</p>
+                </div>
+            </div>
+        </div> 
+
+        <!-- <div class="form-group">
+            <label class="col-md-6 col-md-offset-3">Company teams</label>
+        </div> 
+
+        <div class="form-group" ng-repeat="team in teams">
+            <div class="col-md-6 col-md-offset-3">
+                <input type="text" class="form-control" ng-model="team.value" placeholder="Team name"> 
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-3 col-md-6">
+                <div class="btn btn-default col-md-12" ng-click="addTeam()">Add more teams</div>
+            </div>
+        </div> -->
+
+        <div class="form-group">
+            <div class="col-md-offset-3 col-md-10">
+                <button type="submit" class="btn btn-info">Register</button>
+            </div>
+        </div>
+    </form> 
+</div>

@@ -1,0 +1,44 @@
+<section class="container-fluid projects" data-ng-controller="ProjectsController" data-ng-init="find()">
+
+    <!-- start site-messages -->
+    <div class="site-message" data-ng-include="'/public/system/views/messages.html'"></div>
+    <!-- end site-messages -->
+
+    <!-- start top-wrapper -->
+    <div class="row top-wrapper">
+        <div class="col-md-9">
+            <h1 class="project-title">{{company.name}}</h1>
+        </div>
+
+        <div data-ng-show="!showForm" class="col-md-2 col-md-offset-1 project-create-hidden-wrapper">
+            <div>
+                <div class="btn btn-default col-md-12" data-ng-click="showForm = !showForm">Create Project</div>
+            </div>
+        </div>
+
+        <div class="col-md-3 project-create-absolute-wrapper">
+            <div data-ng-show="showForm" class="col-md-12 project-create-shown-wrapper">
+                <div class="input-projectname-wrapper">
+                    <input name="projectName" type="text" class="form-control" data-ng-model="projectName" id="projectName" placeholder="Project Name" required>
+                </div>
+                <div>
+                    <div class="btn btn-default" data-ng-click="create()">Save</div>
+                    <div class="btn btn-default" data-ng-click="showForm = !showForm">Cancel</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end top-wrapper -->
+
+    <!-- start mid-wrapper -->
+    <div class="row mid-wrapper">
+        <div data-ng-if="company.projects.length" data-ng-repeat="projects in company.projects">
+            <a href="/#!/companies/{{company._id}}/{{projects._id}}" class="col-md-3 project-content-wrapper">
+                <div class="col-md-12 project-content">
+                    <span class="project-name">{{projects.name}}</span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- end mid-wrapper -->
+</section>

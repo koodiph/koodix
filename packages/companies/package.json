@@ -1,7 +1,7 @@
 {
-    "name": "workflow",
+    "name": "companies",
     "version": "0.0.1",
-    "description": "Some description of workflow",
+    "description": "Some description of companies",
     "author": {
         "name": "mean scaffold"
     },

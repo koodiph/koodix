@@ -6,6 +6,6 @@ module.exports = function(app) {
     var index = require('../controllers/index');
 
     app.route('/')
-        .get(index.render);
+        .get(index.render); 
 
 };

@@ -23,8 +23,7 @@ exports.article = function(req, res, next, id) {
 
 /**
  * Create an article
- */
-
+ */ 
  exports.create = function(data, callback) {
     var article = new Article(data);
     //article.user = req.user;

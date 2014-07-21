@@ -42,7 +42,7 @@ module.exports = function(passport, db) {
             return app;
         });
 
-        // Register app dependency
+        // Register socket.io dependency
         mean.register('io', function() {
             return io;
         });

@@ -9,6 +9,9 @@ angular.element(document).ready(function() {
 
 });
 
+// Determine wether to show debug messages
+window.customDebug = true;
+
 // Dynamically add angular modules declared by packages
 var packageModules = [];
 for (var index in window.modules) {
